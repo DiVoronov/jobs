@@ -1,56 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
+import NavBar from "./features/NavBar/NavBat";
+import { MainPage } from "./pages/Main/MainPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { JobDetails } from "./features/JobDetails/JobDetails";
+import { ResponseFromAPI } from "./features/ResponseFromAPI/ResponseFromAPI";
+import { JobList } from "./features/JobList/JobList";
+import { MyList } from "./features/MyList/MyList";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      {/* <ResponseFromAPI/> */}
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <NavBar/>
+        <Routes>
+          <Route path="*" element={<MainPage/>} />
+          <Route path="/details" element={<JobDetails/>} />
+          <Route path="/list" element={<MyList/>} />
+          {/* <Route path="/1" element={<JobList/>} />
+          <Route path="/2" element={<JobList/>} />
+          <Route path="/3" element={<JobList/>} />
+          <Route path="/4" element={<JobList/>} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

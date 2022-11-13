@@ -1,0 +1,17 @@
+
+.navbar-custom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  background: #9598a3;
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  & .pages-custom {
+    display: flex;
+    & > div {
+      margin: 0.5rem;
+    }
+  }
+}

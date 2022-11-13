@@ -1,0 +1,110 @@
+
+.main-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: auto;
+  background: #F5F5F5;
+  
+  & > div {
+    justify-content: space-between;
+    width: 95%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 16px;
+    gap: 32px;
+    height: 164px;
+    background: #FFFFFF;
+
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    & img {
+      position: relative;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      border-radius: 50%;
+      min-width: 85px;
+      width: 85px; 
+      height: 85px;
+    }
+
+    & .card-sub-describe  {
+      max-width: 25%;
+    }
+
+    & .right-element-custom {
+      height: 116px;
+      width: 138px;
+      left: 1246px;
+      top: 24px;
+      border-radius: 0px;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0px;
+      justify-content: space-between;
+      flex: none;
+      order: 3;
+      align-self: stretch;
+      flex-grow: 0;
+      margin: 0px;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+
+      & header {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.625px;
+        color: #3A4562;
+      }
+
+      & span {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.23619px;
+        color: #878D9D;
+      }
+      
+      & > div {
+        margin: 1rem;
+        &:last-child {
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: space-between;
+          // align-items: flex-start;
+          text-align: justify;
+          // height: 100%;
+          font-family: "Proxima Nova";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.23619px;
+          color: #878D9D;
+          
+      }
+      }
+      
+    }
+  }
+}
