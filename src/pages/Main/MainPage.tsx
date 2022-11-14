@@ -19,6 +19,7 @@ import { changeLoadingStatus } from "../../app/slices/loadingSlice";
 
 import { Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { responseObjects } from "../../responseObject";
 
 
 export function MainPage() {
@@ -26,8 +27,12 @@ export function MainPage() {
   // const errorStatus = useSelector( (state: RootState) => state.error);
   // const loadingStatus = useSelector( (state: RootState) => state.loading);
   
-  const { data: allJobs, error, isLoading } = useGetJSONbyTokenQuery("wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu");
+  // const { data: allJobs, error, isLoading } = useGetJSONbyTokenQuery("wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu");
   const dispatch = useAppDispatch();
+
+  const allJobs: IResponse[] = responseObjects;
+  const error = false;
+  const isLoading = false;
   
   // const allJobsArray = useSelector( (state: RootState) => state.allJob);
 

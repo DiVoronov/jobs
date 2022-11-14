@@ -1,26 +1,50 @@
 .job-detail {
   display: flex;
   flex-wrap: wrap;
+  margin: 1rem auto;
+
 }
 
 .second-div-adopt {
   color: rgba(56, 65, 93, 0.355988);
-  margin: auto;
+  margin: 2rem auto;
   width: 90%;
   max-width: 900px;
 
+    & .high-block-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > div {
+        display: flex;
+      }
+      & button {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-left: 1rem;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: #3A4562;
+        font-stretch: 100;
+      }
+      // 
+    //   & > h1 {
+    //     display: flex;
+    //   }
+    }
 
     & .button-custome {
+      margin: 1rem 0px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       padding: 18px 30px;
       gap: 10px;
-      position: relative;
-      left: 0%;
-      right: 83.59%;
-      top: 4.71%;
-      bottom: 92.33%;
       background: #384564;
       border-radius: 8px;
       color: #fff;
@@ -48,10 +72,6 @@
     }
 
     & .title-custom {
-      height: 6rem;
-      left: 2.4%;
-      right: 34.43%;
-      top: calc(50% - 120px/2 - 409.5px);
       font-family: "Proxima Nova";
       font-style: normal;
       font-weight: 700;
@@ -59,13 +79,12 @@
       line-height: 30px;
       letter-spacing: -0.75px;
       color: #3A4562;
+      text-align: left;
     }
 
     & .date-custom {
+      display: flex;
       height: 25px;
-      left: 2.4%;
-      right: 75.03%;
-      top: calc(50% - 25px/2 - 330px);
       font-family: "Roboto";
       font-style: normal;
       font-weight: 400;
@@ -77,25 +96,25 @@
     }
 
     & .text-custom {
-      left: 2.4%;
-      right: 6.68%;
-      top: 16.93%;
-      bottom: 0%;
       font-family: "Roboto";
       font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.5625px;
       color: #3A4562;
       font-stretch: 100;
+      & > div {
+        text-align: justify;
+        font-weight: 400;
+        font-size: 18px;
+        margin: 1rem auto;
+      }
     }
 
     & .line-custom {
       border-radius: 20px;
       height: 1px;
       margin: 1rem auto;
-      width: 90%;
+      width: 100%;
       background: #3A4562;
       mix-blend-mode: normal;
       opacity: 0.13;
@@ -109,6 +128,7 @@
       display: flex;
       justify-content: center;
       margin: 1rem;
+      margin-left: 0px;
       align-items: center;
       height: 49px;
       width: 222px;
@@ -138,9 +158,9 @@
     }
     & .div-attached-images {
       display: flex;
-      justify-content: center;
       & .for-pictures-custom {
         margin: 1rem;
+        margin-left: 0px;
         & img {
           width: 10rem;
           height: 5rem;
@@ -165,7 +185,26 @@
       line-height: 23px;
       letter-spacing: -0.5px;
       color: rgba(255, 255, 255, 0.669635);
-      
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before {
+          position: absolute;
+          height: 273px;
+          width: 273px;
+          left: -50px;
+          right: 43.01%;
+          top: -50px;
+          border-radius: 50%;
+          right: 43.01%;
+          content: '';
+          background: #202336;
+          z-index: -1;
+        }
+      & > div {
+        margin-top: 1rem;
+        
+      }
       & h1 {
         font-family: "Proxima Nova";
         font-style: normal;
@@ -174,18 +213,21 @@
         line-height: 19px;
         letter-spacing: 0.23619px;
         color: #E7EAF0;
+        margin: 0px 1rem;
       }
 
     }
 
     & .salary {
       display: "flex";
+      margin: auto 1rem;
       flex-direction: "column";
       margin-bottom: 2rem;
+      min-width: 20%;
+      justify-content: space-between;
       & span {
         align-items: center;
         align-content: center;
-        justify-content: center;
         display: flex;
         font-family: "Proxima Nova";
         font-style: normal;
@@ -194,6 +236,7 @@
         line-height: 25px;
         letter-spacing: -0.625px;
         color: #3A4562;
+        text-align: left;
       }
       & #sub-title-custom {
         font-family: "Roboto";
@@ -211,4 +254,58 @@
       width: 100%;
       margin: 0px;
     }
+
+    & .sub-title-custom {
+      display: flex;
+      margin-top: 2rem;
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0.413333px;
+      color: #3A4562;
+    }
+
+    & .sub-title-custom-small {
+      display: flex;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: -0.5625px;
+      color: #3A4562;
+      font-stretch: 100;
+    }
+}
+
+@media screen and (max-width: 450px) {
+  .second-div-adopt {
+    
+    & #card-job-for-sm-size {
+      flex-direction: column;
+      & > div {
+        margin-bottom: 1rem;
+      }
+      & .salary {
+        margin: 0px;
+        margin-bottom: 1rem;
+      }
+    }
+    & .high-block-custom {
+      display: flex;
+      flex-direction: column;
+      & > div {
+        margin: 1rem;
+        & button {
+          font-size: 0.8rem;
+
+        }
+      }
+    }
+    & #first-button {
+      display: none;
+    }
+  }
 }

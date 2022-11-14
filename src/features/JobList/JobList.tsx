@@ -50,7 +50,7 @@ export function JobList( props: PropsLobList ) {
         if (index >= props.cortege[0] && index <= props.cortege[1]) { 
         return (
           <div style={{display: "flex"}} key={element.id}>
-            <div>
+            <div className="img-and-describe" style={{justifyContent: "flex-start", width: "100%"}}>
                 <img 
                   src={`${element.pictures[0]}/?random=${element.id}`}
                   alt="not avalible"
@@ -78,7 +78,7 @@ export function JobList( props: PropsLobList ) {
         { 
           showAlert &&
           <div style={{position: "fixed", left: "20px", bottom: "20px", background: "none", boxShadow: "none"}}>
-            <Alert variant="filled" severity="info">
+            <Alert variant="filled" severity="info" sx={{maxWidth: {xs: "80%", sm: "50%"}, display: "flex", flexDirection: {xs: "column", sm: "row"}}}>
               <p style={{color: "white"}}>You have successfully added the Job to your list</p>
             </Alert>
           </div>

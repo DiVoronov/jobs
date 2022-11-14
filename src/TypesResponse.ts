@@ -15,8 +15,8 @@ export interface IResponse {
   benefits: string[];
   location: ILocation;
   pictures: string[];
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date | string;
+  updatedAt: Date | string;
   description: string;
   employment_type: string[];
 }
