@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/jobs/static/css/main.56464baa.css",
+    "main.js": "/jobs/static/js/main.1878b478.js",
+    "index.html": "/jobs/index.html",
+    "static/media/logoBig.svg": "/jobs/static/media/logoBig.4439969634e30af5002f0e5dbcee379a.svg",
+    "main.56464baa.css.map": "/jobs/static/css/main.56464baa.css.map",
+    "main.1878b478.js.map": "/jobs/static/js/main.1878b478.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56464baa.css",
+    "static/js/main.1878b478.js"
+  ]
+}
