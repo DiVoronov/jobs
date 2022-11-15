@@ -1,12 +1,9 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { IResponse } from '../../TypesResponse';
+import React, { useState, useMemo } from "react";
+import { IResponse } from "../../TypesResponse";
 import "./jobList.style.scss";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch } from "../../app/hooks";
 import { changeCurrentJob } from "../../app/slices/currentJobSlice";
-import { useSelector } from "react-redux";
-import { useGetJSONbyTokenQuery } from "../../app/api/jobs.api";
-import { RootState } from "../../app/store";
 import { RatingElement } from "../shared/Rating/Rating";
 
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
@@ -21,9 +18,6 @@ type PropsLobList = {
 };
 
 export function JobList( props: PropsLobList ) {
-
-  const currentElement = useSelector( (state: RootState) => state.currentJob);
-  const allElements: IResponse[] = useSelector( (state: RootState) => state.allJob);
 
   const [showAlert, setShowAlert] = useState(false);
 
@@ -57,14 +51,17 @@ export function JobList( props: PropsLobList ) {
                 />
               
               <div className="aboutCard" style={{display: "flex", flexDirection: "column", gap: "10px"}}>
-                <header><NavLink to={"/details"} onClick={() => setSendDetails(element.id)}>{element.name}</NavLink></header>
+                <header>
+                  <NavLink to={"/details"} onClick={() => setSendDetails(element.id)}>{element.name}</NavLink>
+                </header>
 
                 <span>{element.title}</span>
-                <span style={{display: "flex", alignItems: "flex-start"}}><LocationOnIcon color="disabled"/><p>{element.address}</p></span>
+                <span style={{display: "flex", alignItems: "flex-start"}}><LocationOnIcon color="disabled"/>
+                  <p>{element.address}</p>
+                </span>
               </div>
             </div>
             
-
             <div className="card-sub-describe">
               <RatingElement/>
               <div className="right-element-custom">
@@ -77,8 +74,8 @@ export function JobList( props: PropsLobList ) {
       })}
         { 
           showAlert &&
-          <div style={{position: "fixed", left: "20px", bottom: "20px", background: "none", boxShadow: "none"}}>
-            <Alert variant="filled" severity="info" sx={{maxWidth: {xs: "80%", sm: "50%"}, display: "flex", flexDirection: {xs: "column", sm: "row"}}}>
+          <div style={{position: "fixed", left: "1%", bottom: "1%", background: "none", boxShadow: "none"}}>
+            <Alert variant="filled" severity="info" sx={{maxWidth: {xs: "80%", sm: "50%"}, p: {xs: 0.5, sm: 1}, display: "flex", position: "fixed", left: "1%", bottom: "1%"}}>
               <p style={{color: "white"}}>You have successfully added the Job to your list</p>
             </Alert>
           </div>

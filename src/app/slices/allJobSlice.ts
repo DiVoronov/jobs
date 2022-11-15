@@ -7,7 +7,6 @@ export const allJobSlice = createSlice({
   reducers: {
     giveAllJob (state, action) {
       state = action.payload;
-      console.log(state)
       return state;
     }
   }

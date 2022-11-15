@@ -12,15 +12,17 @@
   line-height: 23px;
   letter-spacing: -0.5px;
   color: rgba(255, 255, 255, 0.669635);
+
   & > div {
     color: black;
     background: white;
+
     & .header-div-custome {
       width: 100%;
       background: #2A3047;
       height: 4rem;
-
     }
+    
     & h1 {
       color: white;
       width: 100%;

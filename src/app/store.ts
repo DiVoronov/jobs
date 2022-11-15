@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { jobsApi } from "./api/jobs.api";
-import { allJobReducer } from './slices/allJobSlice';
+import { allJobReducer } from "./slices/allJobSlice";
 import { currentJobReducer } from "./slices/currentJobSlice";
 import { errorReducer } from "./slices/errorSlice";
 import { loadingReducer } from "./slices/loadingSlice";

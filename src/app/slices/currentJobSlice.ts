@@ -7,7 +7,6 @@ export const currentJobSlice = createSlice({
   reducers: {
     changeCurrentJob (state, action) {
       state = action.payload;
-      console.log(state);
       return state;
     }
   }

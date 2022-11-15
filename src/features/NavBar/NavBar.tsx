@@ -4,7 +4,7 @@ import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import logo from "../../logoBig.svg";
-import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
+import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
 
 const navigation = [
   { name: "MAIN", href: "/", current: false },
@@ -90,15 +90,12 @@ export default function NavBar() {
                 >
                   {item.name}
                 </NavLink>
-
                   
-
-
               ))}
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
-  )
-}
+  );
+};

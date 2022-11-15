@@ -18,10 +18,8 @@
     gap: 32px;
     min-height: 164px;
     background: #FFFFFF;
-
     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
-
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -64,7 +62,6 @@
     & > div {
       display: flex;
       align-items: center;
-
       & header {
         font-family: 'Proxima Nova';
         font-style: normal;
@@ -88,12 +85,7 @@
       & > div {
         margin: 1rem;
         &:last-child {
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: space-between;
-          // align-items: flex-start;
           text-align: justify;
-          // height: 100%;
           font-family: "Proxima Nova";
           font-style: normal;
           font-weight: 400;
@@ -101,10 +93,8 @@
           line-height: 25px;
           letter-spacing: 0.23619px;
           color: #878D9D;
-          
       }
       }
-      
     }
   }
 }
@@ -127,7 +117,6 @@
           align-items: flex-start;
           padding: 0px;
           justify-content: flex-end;
-          // width: 100%;
           & svg {
             position: relative;
             top: 0px;
@@ -135,13 +124,10 @@
           }
         }
         & > div {
-          // width: 50%;
           margin: 5px 1rem;
         }
       }
     }
-    
-    
   }
 }
 
@@ -159,5 +145,9 @@
         margin: 2rem;
       }
     }
+    & .MuiAlert-icon, 
+    & .MuiAlert-message {
+      margin: "0px";
+  }
   }
 }
